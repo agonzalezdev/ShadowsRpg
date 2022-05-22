@@ -9,6 +9,7 @@ public class UIManager : Singleton<UIManager>
 
     [Header("Panels")]
     [SerializeField] private GameObject statsPanel;
+    [SerializeField] private GameObject inventoryPanel;
 
     [Header("Bars")]
     [SerializeField] private Image characterHP;
@@ -86,8 +87,8 @@ public class UIManager : Singleton<UIManager>
 
         statDmg.text = stats.Dmg.ToString();
         statDefense.text = stats.Defense.ToString();
-        statSpeed.text = stats.Speed.ToString();
-        statCritical.text = $"{stats.CriticalChance}%";
+        statSpeed.text = $"{stats.Speed:F1}%";
+        statCritical.text = $"{stats.CriticalChance:F1}%";
         statBlock.text = $"{stats.BlockChance}%";
         statLevel.text = stats.Level.ToString();
         statExp.text = stats.CurrentExp.ToString();
@@ -118,4 +119,18 @@ public class UIManager : Singleton<UIManager>
         this.currentExp = currentExp;
         this.requiredExpToNewLevel = requiredExp;
     }
+
+    #region Panels
+
+    public void TriggerStatsPanel()
+    {
+        statsPanel.SetActive(!statsPanel.activeSelf);
+    }
+
+    public void TriggerInventoryPanel()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+    }
+
+    #endregion
 }

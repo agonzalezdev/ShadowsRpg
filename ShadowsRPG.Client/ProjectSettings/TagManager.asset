@@ -53,9 +53,12 @@ TagManager:
   - name: Tilemap_Houses
     uniqueID: 3845661093
     locked: 0
-  - name: Character
-    uniqueID: 665400021
-    locked: 0
   - name: Tilemap_props
     uniqueID: 769351643
+    locked: 0
+  - name: Items
+    uniqueID: 458726123
+    locked: 0
+  - name: Character
+    uniqueID: 665400021
     locked: 0

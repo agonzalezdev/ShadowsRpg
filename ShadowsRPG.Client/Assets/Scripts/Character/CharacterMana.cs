@@ -9,6 +9,7 @@ public class CharacterMana : MonoBehaviour
     [SerializeField] private float manaRegenPerSecond;
 
     public float CurrentMana { get; private set; }
+    public bool CanBeHealed => CurrentMana < maxMana;
 
     private CharacterHP _characterHP;
 
@@ -43,7 +44,21 @@ public class CharacterMana : MonoBehaviour
         }
     }
 
-    public void RestoreMana()
+    public void RestoreMana(float quantity)
+    {
+        if (CurrentMana >= maxMana)
+            return;
+
+        CurrentMana += quantity;
+        
+        if(CurrentMana > maxMana)        
+            CurrentMana = maxMana;
+
+        UpdateManaBar();
+
+    }
+
+    public void ReviveCharacterRestoreMana()
     {
         CurrentMana = initialMana;
         UpdateManaBar();

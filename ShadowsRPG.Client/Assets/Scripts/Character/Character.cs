@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
     {
         CharacterHP.ReviveCharacter();
         CharacterAnimations.ReviveCharacter();
-        CharacterMana.RestoreMana();
+        CharacterMana.ReviveCharacterRestoreMana();
     }
 
     private void OnEnable()

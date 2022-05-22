@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f449cd851eee1b34b8a905aba0c8e910, type: 3}
+  m_Name: ManaPotion
+  m_EditorClassIdentifier: 
+  Id: ManaPotion
+  Icon: {fileID: 21300000, guid: d2d6052fcadf6ce469a55520d1e057a6, type: 3}
+  Name: Mana potion
+  Description: This potion heal you 30 mana.
+  ItemType: 1
+  IsConsumable: 1
+  IsStackable: 1
+  MaxStack: 50
+  Quantity: 0
+  ManaRestoreAmount: 30
