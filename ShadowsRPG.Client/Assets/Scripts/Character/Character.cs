@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField] private CharacterStats stats;
+
     public CharacterHP CharacterHP { get; private set; }
     public CharacterMana CharacterMana { get; private set; }
     public CharacterAnimations CharacterAnimations { get; private set; }
@@ -23,6 +25,37 @@ public class Character : MonoBehaviour
         CharacterHP.ReviveCharacter();
         CharacterAnimations.ReviveCharacter();
         CharacterMana.RestoreMana();
+    }
+
+    private void OnEnable()
+    {
+        AttributeButton.EventUpgradeAttribute += AttributeResponse;
+    }
+
+    private void OnDisable()
+    {
+        AttributeButton.EventUpgradeAttribute -= AttributeResponse;
+    }
+    private void AttributeResponse(AttributeType attributeType)
+    {
+        if (stats.AvailableAttributePoints <= 0) return;
+        
+        switch (attributeType)
+        {
+            case AttributeType.Strenght:
+                stats.Strenght++;
+                stats.AddBonusStrenght();
+                break;
+            case AttributeType.Intelligence:
+                stats.Intelligence++;
+                stats.AddBonusIntelligence();
+                break;
+            case AttributeType.Dexterity:
+                stats.Dexterity++;
+                stats.AddBonusDexterity();
+                break;
+        }
+        stats.AvailableAttributePoints -= 1;
     }
 
 }

@@ -31,6 +31,12 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private TextMeshProUGUI statExp;
     [SerializeField] private TextMeshProUGUI statRequiredExpToNextLevel;
 
+    [Header("Attributes")]
+    [SerializeField] private TextMeshProUGUI attrStr;
+    [SerializeField] private TextMeshProUGUI attrInt;
+    [SerializeField] private TextMeshProUGUI attrDex;
+    [SerializeField] private TextMeshProUGUI attrAvailableAttributePoints;
+
 
     private float currentHP;
     private float maxHP;
@@ -86,6 +92,11 @@ public class UIManager : Singleton<UIManager>
         statLevel.text = stats.Level.ToString();
         statExp.text = stats.CurrentExp.ToString();
         statRequiredExpToNextLevel.text = stats.RequiredExpToNextLevel.ToString();
+
+        attrStr.text = stats.Strenght.ToString();
+        attrInt.text = stats.Intelligence.ToString();
+        attrDex.text = stats.Dexterity.ToString();
+        attrAvailableAttributePoints.text = $"Points {stats.AvailableAttributePoints}";
     }
 
 

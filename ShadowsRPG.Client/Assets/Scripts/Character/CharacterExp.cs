@@ -70,6 +70,7 @@ public class CharacterExp : MonoBehaviour
         currentExpTmp = 0f;
         requiredExpToNextLevel *= incrementalValue;
         stats.RequiredExpToNextLevel = requiredExpToNextLevel;
+        stats.AvailableAttributePoints += 3;
     }
 
     private void UpdateExpBar()

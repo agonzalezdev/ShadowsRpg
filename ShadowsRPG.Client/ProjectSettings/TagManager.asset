@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemap_Ground
+    uniqueID: 2117959273
+    locked: 0
+  - name: Tilemap_Limit
+    uniqueID: 2903914655
+    locked: 0
+  - name: Tilemap_Trees
+    uniqueID: 2192268493
+    locked: 0
+  - name: Tilemap_Houses
+    uniqueID: 3845661093
+    locked: 0
+  - name: Character
+    uniqueID: 665400021
+    locked: 0
+  - name: Tilemap_props
+    uniqueID: 769351643
+    locked: 0
