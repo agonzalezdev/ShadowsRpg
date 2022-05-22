@@ -805,9 +805,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 8.5, y: 6}
-      - {x: -6, y: 6}
-      - {x: -6, y: -15}
+    - - {x: 8.5, y: 9}
+      - {x: -8, y: 9}
+      - {x: -8, y: -15}
       - {x: 8.5, y: -15}
 --- !u!4 &137800604
 Transform:
@@ -990,8 +990,8 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.19
-  m_DeadZoneHeight: 0.3
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
@@ -2432,7 +2432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.49999967, y: -0.00000023841858, z: -10}
+  m_LocalPosition: {x: -0.6069368, y: -1.8700002, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3015,7 +3015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 843731497}
+  m_BoundingShape2D: {fileID: 137800603}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!1 &634022732
@@ -4105,10 +4105,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 10, y: 6.7}
-      - {x: -11, y: 6.7}
-      - {x: -11, y: -5}
-      - {x: 10, y: -5}
+    - - {x: 10, y: 8}
+      - {x: -12, y: 8}
+      - {x: -12, y: -7}
+      - {x: 10, y: -7}
 --- !u!4 &843731498
 Transform:
   m_ObjectHideFlags: 0
@@ -4871,7 +4871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988348236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15000024, y: -1.8700001, z: -10}
+  m_LocalPosition: {x: -0.15, y: -1.87, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5853,13 +5853,13 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 10
-  m_DeadZoneWidth: 0.19
-  m_DeadZoneHeight: 0.3
+  m_CameraDistance: 12
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 1.26
+  m_SoftZoneHeight: 0.83
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
