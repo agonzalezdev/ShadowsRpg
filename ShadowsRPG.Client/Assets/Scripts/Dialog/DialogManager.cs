@@ -41,6 +41,13 @@ public class DialogManager : Singleton<DialogManager>
                 return;
             }
 
+            if(NPCAvailable.NPCDialog.Type != NPCInteractionType.Dialog)
+            {
+                UIManager.Instance.OpenInteracionPanel(NPCAvailable.NPCDialog.Type);
+                TriggerDialogPanel(false);
+                return;
+            }
+
             if (animatedDialog)
             {
                 ContinueDialog();

@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager>
     [Header("Panels")]
     [SerializeField] private GameObject statsPanel;
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inspectorQuestsPanel;
 
     [Header("Bars")]
     [SerializeField] private Image characterHP;
@@ -130,6 +131,29 @@ public class UIManager : Singleton<UIManager>
     public void TriggerInventoryPanel()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+    }
+
+    public void TriggerInspectorQuestsPanel()
+    {
+        inspectorQuestsPanel.SetActive(!inspectorQuestsPanel.activeSelf);
+    }
+
+    public void OpenInteracionPanel(NPCInteractionType nPCInteractionType)
+    {
+        switch (nPCInteractionType)
+        {
+            case NPCInteractionType.Dialog:
+                break;
+            case NPCInteractionType.OpenQuests:
+                TriggerInspectorQuestsPanel();
+                break;
+            case NPCInteractionType.OpenStore:
+                break;
+            case NPCInteractionType.OpenCrafting:
+                break;
+            default:
+                break;
+        }
     }
 
     #endregion
