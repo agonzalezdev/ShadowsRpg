@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject statsPanel;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject inspectorQuestsPanel;
+    [SerializeField] private GameObject characterQuestsPanel;
 
     [Header("Bars")]
     [SerializeField] private Image characterHP;
@@ -136,6 +137,11 @@ public class UIManager : Singleton<UIManager>
     public void TriggerInspectorQuestsPanel()
     {
         inspectorQuestsPanel.SetActive(!inspectorQuestsPanel.activeSelf);
+    }
+
+    public void TriggerCharacterQuestsPanel()
+    {
+        characterQuestsPanel.SetActive(!characterQuestsPanel.activeSelf);
     }
 
     public void OpenInteracionPanel(NPCInteractionType nPCInteractionType)
